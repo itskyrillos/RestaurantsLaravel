@@ -17,15 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/restaurants', function () {
-    return view('restaurants.index');
-});
+Route::get('/restaurants/index', 'RestaurantController@index');
 
-Route::get('/restaurants/show/{id}', function ($id) {
-    echo $id;
-    return view('restaurants.show');
-});
+Route::get('/restaurants/show/{id}', 'RestaurantController@show');
 
-Route::get('/restaurants/create', function () {
-    return view('restaurants.create');
-});
+Route::get('/restaurants/create', 'RestaurantController@create');
