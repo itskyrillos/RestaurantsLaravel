@@ -1,5 +1,6 @@
 <?php
 
+use App\Restaurant;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,5 @@ Route::get('/restaurants/index', 'RestaurantController@index');
 Route::get('/restaurants/show/{id}', 'RestaurantController@show');
 
 Route::get('/restaurants/create', 'RestaurantController@create');
+
+Route::post('/restaurants/create', 'RestaurantController@store');
